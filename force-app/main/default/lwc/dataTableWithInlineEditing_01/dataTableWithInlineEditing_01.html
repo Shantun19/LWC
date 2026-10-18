@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Lightning data table with inline editing">
+        <!-- Salesforce provides lightning-datatable which supports inline editing using the editable property. -->
+        <!-- When a user edits a cell, the event onsave or oncellchange is fired. -->
+        <!-- I would capture those draft values (event.detail.draftValues) and track them in my component. -->
+        <lightning-datatable key-field="Id" data={accounts} columns={columns} draft-values={draftValues}
+            onsave={handleSave} hide-checkbox-column="true">
+        </lightning-datatable>
+    </lightning-card>
+</template>
